@@ -2,18 +2,14 @@
    require_once('db-config.php');
    require_once('navbar.php');
    ?>
-<!--<div class="container">
-	<h3 class="page-title">Courses</h3>-->
-
-
-   <div class="container">
+<div class="container">
 	<h3 class="page-title">Course List
       <a href="add-course.php" class="btn btn-success float-right">
-      	Add course
+      	Add Course
       </a>
 	</h3>
 
-   <!-- Table --->
+  <!-- Table --->
    <table class="table table-bordered table-striped">
    	<tr>
    		<th>ID</th>
@@ -24,7 +20,7 @@
    	</tr>
 <?php
 
-$sql ="SELECT * FROM course";
+$sql ="Select * from course";
 
    $ret = $db->query($sql);
    while($row = $ret->fetchArray(SQLITE3_ASSOC) ) 
@@ -56,11 +52,6 @@ $sql ="SELECT * FROM course";
    </table>
 
  <!-- Table End --->
-
-
-
-
-	
 </div>
 
 
